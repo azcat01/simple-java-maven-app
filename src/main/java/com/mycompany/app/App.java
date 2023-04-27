@@ -11,7 +11,7 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(MESSAGE);
-        System.out.println('Java Maven App has successfully deployed');
+        System.out.println("Java Maven App has successfully deployed");
     }
 
     public String getMessage() {
