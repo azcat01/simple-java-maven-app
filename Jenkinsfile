@@ -37,22 +37,22 @@ pipeline {
         sleep(time: 1, unit: 'MINUTES')
       }
     }
-  //   stage('Run in AWS') {
-  //     steps {
-  //       withAWS(credentials: 'react-app-server', region:'ap-southeast-1') {
-  //         createDeployment(
-  //           gitHubRepository: 'azcat01/simple-java-maven-app',
-  //           gitHubCommitId: '743cab968bcd7e04ed099407f22308379e49038b',
-  //           applicationName: 'simple-java-maven-app',
-  //           deploymentGroupName: 'CodeDeploy-maven-app',
-  //           deploymentConfigName: 'CodeDeployDefault.AllAtOnce',
-  //           description: 'Deployment from Jenkins Local',
-  //           waitForCompletion: 'true'
-  //         )
-  //       }
-  //     }
-  //   }
-  // }
+    // stage('Run in AWS') {
+    //   steps {
+    //     withAWS(credentials: 'react-app-server', region:'ap-southeast-1') {
+    //       createDeployment(
+    //         gitHubRepository: 'azcat01/simple-java-maven-app',
+    //         gitHubCommitId: '743cab968bcd7e04ed099407f22308379e49038b',
+    //         applicationName: 'simple-java-maven-app',
+    //         deploymentGroupName: 'CodeDeploy-maven-app',
+    //         deploymentConfigName: 'CodeDeployDefault.AllAtOnce',
+    //         description: 'Deployment from Jenkins Local',
+    //         waitForCompletion: 'true'
+    //       )
+    //     }
+    //   }
+    // }
+  }
 }
 
 // Scripted Pipeline //
