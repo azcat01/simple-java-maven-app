@@ -2,4 +2,4 @@
 
 cd /tmp
 
-java -jar target/*.jar
+java -jar target/my-app-1.0-SNAPSHOT.jar
