@@ -34,22 +34,8 @@ pipeline {
     stage('Deliver') {
       steps {
         sh './jenkins/scripts/deliver.sh'
-        // sleep(time: 1, unit: 'MINUTES')
-      }
-    }
-    stage('Run in AWS') {
-      steps {
-        withAWS(credentials: 'react-app-server', region:'ap-southeast-1') {
-          createDeployment(
-            gitHubRepository: 'azcat01/simple-java-maven-app',
-            gitHubCommitId: 'd876f19808be23b9d90b5616266b89f18787b66d',
-            applicationName: 'simple-java-maven-app',
-            deploymentGroupName: 'CodeDeploy-maven-app',
-            deploymentConfigName: 'CodeDeployDefault.AllAtOnce',
-            description: 'Deployment from Jenkins Local',
-            waitForCompletion: 'true'
-          )
-        }
+        sleep(time: 1, unit: 'MINUTES')
+        archiveArtifacts artifacts: 'target/*.jar'
       }
     }
   }
@@ -75,19 +61,7 @@ pipeline {
 //     stage('Deliver') {
 //       sh './jenkins/scripts/deliver.sh'
 //       sleep(time: 1, unit: 'MINUTES')
-//     }
-//     stage('Run in AWS') {
-//       withAWS(credentials: 'react-app-server', region:'ap-southeast-1') {
-//         createDeployment(
-//           gitHubRepository: 'azcat01/simple-java-maven-app',
-//           gitHubCommitId: 'b23d8591a9d3f0dc3e4dc41bb258c5007d9be806',
-//           applicationName: 'simple-java-maven-app',
-//           deploymentGroupName: 'CodeDeploy-maven-app',
-//           deploymentConfigName: 'CodeDeployDefault.AllAtOnce',
-//           description: 'Deployment from Jenkins Local',
-//           waitForCompletion: 'true'
-//         )
-//       }
+//       archiveArtifacts artifacts: 'target/*.jar'
 //     }
 //   }
 // }
