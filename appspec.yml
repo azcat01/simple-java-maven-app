@@ -1,0 +1,15 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /tmp
+    overwrite: true
+hooks:
+  BeforeInstall:
+    - location: aws/scripts/install_dependencies
+      timeout: 420
+      runas: root
+  ApplicationStart:
+    - location: aws/scripts/run_app
+      timeout: 300
+      runas: root
