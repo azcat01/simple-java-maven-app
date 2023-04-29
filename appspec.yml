@@ -3,7 +3,6 @@ os: linux
 files:
   - source: /
     destination: /tmp
-    overwrite: true
 hooks:
   BeforeInstall:
     - location: aws/scripts/build_app
