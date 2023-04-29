@@ -42,7 +42,7 @@ pipeline {
         withAWS(credentials: 'react-app-server', region:'ap-southeast-1') {
           createDeployment(
             gitHubRepository: 'azcat01/simple-java-maven-app',
-            gitHubCommitId: 'f5fd67abd205e869375707179516068ed7d1936b',
+            gitHubCommitId: 'd876f19808be23b9d90b5616266b89f18787b66d',
             applicationName: 'simple-java-maven-app',
             deploymentGroupName: 'CodeDeploy-maven-app',
             deploymentConfigName: 'CodeDeployDefault.AllAtOnce',
