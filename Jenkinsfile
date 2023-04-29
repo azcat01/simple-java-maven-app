@@ -34,7 +34,7 @@ pipeline {
     stage('Deliver') {
       steps {
         sh './jenkins/scripts/deliver.sh'
-        sleep(time: 1, unit: 'MINUTES')
+        // sleep(time: 1, unit: 'MINUTES')
       }
     }
     stage('Run in AWS') {

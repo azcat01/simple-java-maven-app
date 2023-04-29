@@ -6,7 +6,7 @@ files:
     overwrite: true
 hooks:
   BeforeInstall:
-    - location: aws/scripts/install_dependencies
+    - location: aws/scripts/build_app
       timeout: 420
       runas: root
   ApplicationStart:
