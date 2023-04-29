@@ -1,4 +1,4 @@
 #!/bin/bash
 
-mvn -B -DskipTests -Denforcer.skip=true clean package
-mvn -Denforcer.skip=true test
+mvn -B -"DskipTests" "-Denforcer.skip=true" clean package
+mvn "-Denforcer.skip=true" test
