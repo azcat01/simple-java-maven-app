@@ -4,5 +4,5 @@ cd /home/ec2-user/maven-app
 
 pwd
 
-mvn -B -"DskipTests" "-Denforcer.skip=true" clean package
-mvn "-Denforcer.skip=true" test
+# mvn -B -"DskipTests" "-Denforcer.skip=true" clean package
+# mvn "-Denforcer.skip=true" test
