@@ -1,13 +1,9 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /
+  - source: /target/my-app-1.0-SNAPSHOT.jar
+    destination: /tmp
 hooks:
-  BeforeInstall:
-    - location: aws/scripts/build_app
-      timeout: 10000
-      runas: root
   ApplicationStart:
     - location: aws/scripts/run_app
       timeout: 300

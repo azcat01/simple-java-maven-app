@@ -1,6 +1,0 @@
-#!/bin/bash
-
-cd /home/ec2-user/maven-app
-
-mvn -B -"DskipTests" "-Denforcer.skip=true" clean package
-mvn "-Denforcer.skip=true" test
