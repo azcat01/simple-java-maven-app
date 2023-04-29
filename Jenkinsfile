@@ -35,7 +35,7 @@ pipeline {
       steps {
         sh './jenkins/scripts/deliver.sh'
         sleep(time: 1, unit: 'MINUTES')
-        archiveArtifacts artifacts: '/target/*.jar'
+        archiveArtifacts artifacts: 'target/*.jar'
       }
     }
   }
